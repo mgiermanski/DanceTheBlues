@@ -4,7 +4,7 @@
 	$past_bands = '				</table>
 	';
 	if (($band_link = fopen("https://docs.google.com/spreadsheets/d/1oJBQBD-s6DDqnEENpPW1nLXMQZjCz8MUqUYTIvTVyzY/pub?output=csv", "r")) !== FALSE){
-		$today = time();
+		$today = strtotime('-1 day');
 		
 		$past_limit = strtotime('-7 months');
 		$upcoming_limit = strtotime('+7 months');
