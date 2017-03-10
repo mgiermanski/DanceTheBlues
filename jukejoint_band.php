@@ -55,7 +55,7 @@
 			}
 		}
 		
-		fclose($handle);
+		fclose($band_link);
 	}
 	$upcoming_bands .= '				</table>
 	';
