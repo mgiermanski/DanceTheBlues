@@ -5,7 +5,7 @@
 	
 	$access_token = "758369317596728|RUD-AXCah_UsxDoJyVXk62_sRtY";
 		
-	$fields="id,name,description,place,timezone,start_time, cover";
+	$fields="id,name,description,place,timezone,start_time,cover";
 	
 	$json_link = "https://graph.facebook.com/{$fb_page_id}/events/attending/?fields={$fields}&access_token={$access_token}";
 	 
@@ -16,6 +16,8 @@
 	// count the number of events
 	$event_count = count($obj['data']);
 	
+			//echo "<!-- " . $json_link . " -->
+		//";
 	// today
 	$today = strtotime(date('Y-m-d'));
 	
@@ -23,7 +25,7 @@
 	for($x=0; $x<$event_count; $x++){
 		// If name not equal "Juke Joint" skip the event
 		$name = isset($obj['data'][$x]['name']) ? $obj['data'][$x]['name'] : "";
-		
+
 		if(stripos($name, "Juke Joint") !== FALSE){
 			// store this events place id into place_id string
 			$place_id = isset($obj['data'][$x]['place']['id']) ? $obj['data'][$x]['place']['id'] : "";
@@ -46,7 +48,7 @@
 		// Load location info from facebook via the place_id
 		if(isset($place_id)){
 			// Fields = name, about, location, website, phone, emails
-			$fields="id,name,about,location,phone,website,emails";
+			$fields="id,name,about,location,phone,website,emails,cover";
 			
 			$json_link = "https://graph.facebook.com/{$place_id}/?fields={$fields}&access_token={$access_token}";
 			
@@ -60,8 +62,8 @@
 			$venue_address_city = isset($obj['location']['city']) ? $obj['location']['city'] : "";
 			$venue_address_state = isset($obj['location']['state']) ? $obj['location']['state'] : "";
 			$venue_address_zip = isset($obj['location']['zip']) ? $obj['location']['zip'] : "";
-			$venue_address_lat = isset($obj['location']['latitude']) ? $obj['location']['latitude'] : "";
-			$venue_address_long = isset($obj['location']['longitude']) ? $obj['location']['longitude'] : "";
+			$venue_address_long = isset($obj['location']['latitude']) ? $obj['location']['latitude'] : "";
+			$venue_address_lat = isset($obj['location']['longitude']) ? $obj['location']['longitude'] : "";
 			
 			$venue_address = $venue_address_street . "<br>" . $venue_address_city . ", " . $venue_address_state . ", " . $venue_address_zip;
 			
@@ -76,11 +78,13 @@
 						web = $venue_website
 						phone = $venue_phone
 						about = $venue_about
-						im = $venue_image
-						offset = $venue_image_offset-->
+						im = $venue_address_lat
+						offset = $venue_address_long-->
 			";
 		} else {
 			// Default Venue - HooHa information
+			echo "<!-- Default Selected, place name = " . $place_name ." -->
+			";
 			$venue_name = "HooHa Bar";
 			$venue_address = "41 Tribune St<br>South Brisbane, QLD, 4101";
 			$venue_address_long = "-27.481606";
@@ -125,12 +129,12 @@
 						<p><a href="' . $venue_website . '">' . $venue_website . '</a></p>
 						';
 	}
-	$map_link = "https://www.google.com.au/maps/place/27%C2%B028'53.8%22S+153%C2%B001'19.8%22E/@$venue_address_long,$venue_address_lat,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d$venue_address_long!4d$venue_address_lat";
+	$map_link = "https://www.google.com.au/maps/place/" . str_replace(" ", "+", str_replace("<br>", " ", $venue_address)) . "/@$venue_address_long,$venue_address_lat,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d$venue_address_long!4d$venue_address_lat";
 	$output_String .= '</div>
 				</div>
 				<div class="gold-cont-61" style="float: left; overflow: hidden;">
 					<div class ="standard-content">
-						<a href="' . $map_link . '"><img src="https://maps.googleapis.com/maps/api/staticmap?center=' . $venue_address_long . ',' . $venue_address_lat . '&zoom=17&size=600x400&scale=2&key= AIzaSyC7Bg-bsR7LHgmXetqEHtneBOMLkmXAVag&markers=color:red|label:' . $venue_name . '|' . $venue_address_long . ',' . $venue_address_lat . '" width="100%"></a>
+						<a href="' . $map_link . '"><img src="https://maps.googleapis.com/maps/api/staticmap?center=' . $venue_address_long . ',' . $venue_address_lat . '&zoom=17&size=600x400&scale=2&key= AIzaSyC7Bg-bsR7LHgmXetqEHtneBOMLkmXAVag&markers=color:red|label:' . substr($venue_name, 0, 1) . '|' . str_replace(" ", "+", str_replace("<br>", " ", $venue_address)) . '" width="100%"></a>
 					</div>
 				</div>
 			';
