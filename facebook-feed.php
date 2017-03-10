@@ -24,6 +24,8 @@
 	$event_count = count($obj['data']);
 
 	$search_phrase = "This week at Dance the Blues:";
+	
+	$found_classes = 0;
 
     for($x=0; $x<$event_count; $x++){
 		$message = isset($obj['data'][$x]['message']) ? $obj['data'][$x]['message'] : "";
@@ -46,10 +48,21 @@
 				</div>
 			</div>
 		";
+				$found_classes++;
 				break;
 			}
 		}
 	}
 	
+	if($found_classes == 0){
+		echo "<div class='shaded-100 row'>
+				<div class='gold-cont-100'>
+					<div class='standard-content'>
+						<p>There is currently no information on upcoming classes, but watch this space, we usually update class descriptions every Tuesday.</p>
+					</div>
+				</div>
+			</div>
+		";
+	}
 
 ?>
