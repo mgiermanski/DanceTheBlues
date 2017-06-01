@@ -23,7 +23,7 @@
 	// count the number of events
 	$event_count = count($obj['data']);
 
-	$search_phrase = "This week at Dance the Blues:";
+	$search_phrase = "This week at Dance the Blues!";
 	
 	$found_classes = 0;
 
@@ -34,7 +34,7 @@
 			$search_pos = $search_pos + strlen($search_phrase);
 			$at_pos = stripos($message, " at ", $search_pos);
 			$message_date = strtotime(trim(str_replace("st ", "", str_replace("nd ", "", str_replace("rd ", "", str_replace("th ", "", str_replace("of", "", substr($message, $search_pos, $at_pos - $search_pos))))))));
-			if($message_date > time()){
+			if($message_date > (time() - 24 * 60 * 60)){
 				$message = str_ireplace(array("\r\n", "\n", "\r"), '<br>', $message);
 				$message = str_ireplace("{$search_phrase}<br><br>", '', $message);
 				
