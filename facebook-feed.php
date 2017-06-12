@@ -55,10 +55,17 @@
 	}
 	
 	if($found_classes == 0){
+		$nextThursday = strtotime("next Thursday");
 		echo "<div class='shaded-100 row'>
 				<div class='gold-cont-100'>
 					<div class='standard-content'>
-						<p>There is currently no information on upcoming classes, but watch this space, we usually update class descriptions every Tuesday.</p>
+						<p>This week at Dance the Blues!<br>
+						<br>
+						Thursday " . date("j", $nextThursday) . "th " . date("F", $nextThursday) . " at Jagera Arts Centre:<br>
+						7:00pm - 8:00pm - Fundamental Blues<br>
+						<br>
+						8:15pm - 9:15pm - Intermediate Blues<br>
+						</p>
 					</div>
 				</div>
 			</div>
