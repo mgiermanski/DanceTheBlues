@@ -1,7 +1,7 @@
 <?php
 	echo '<div id = "header-wrapper">
 		<div id = "menu-button">
-			<img src="images/menu.jpg">
+			<img src="images/menu.jpg" alt="DtB Logo">
 		</div>
 		
 		<div id = "logo-image">
