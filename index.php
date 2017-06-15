@@ -106,10 +106,10 @@
 				<div class="gold-cont-50" style="float:right;">
 					<div class = "clear-content" style="text-align: left;">
 						<div class="large-screen-content">
-								<img src="images/Image-Home-Classes-Large.jpg" width="100%">
+								<img src="images/Image-Home-Classes-Large.jpg" alt="Classes Image" width="100%">
 						</div>
 						<div class="small-screen-content">
-								<img src="images/Image-Home-Classes-Small.jpg" width="100%">
+								<img src="images/Image-Home-Classes-Small.jpg" alt="Classes Image" width="100%">
 						</div>
 					</div>
 				</div>
@@ -132,10 +132,10 @@
 				<div class="gold-cont-50">
 					<div class = "clear-content" style="text-align: left;">
 						<div class="large-screen-content">
-								<img src="images/Image-Home-Social-Large.jpg" width="100%">
+								<img src="images/Image-Home-Social-Large.jpg" alt="Social Image" width="100%">
 						</div>
 						<div class="small-screen-content">
-								<img src="images/Image-Home-Social-Small.jpg" width="100%">
+								<img src="images/Image-Home-Social-Small.jpg" alt="Social Image" width="100%">
 						</div>
 					</div>
 				</div>
