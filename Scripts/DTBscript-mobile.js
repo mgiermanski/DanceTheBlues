@@ -27,6 +27,7 @@ $(document).ready(function(){
 			}
 
 			switch (direction) {
+				/*
 				case 'left':
 					// Handle LeftSwipe
 					if($(window).width() <= "768"){
@@ -45,7 +46,7 @@ $(document).ready(function(){
 						$("#menu-vertical").removeClass("menu-closed");
 					} 
 					break;
-		
+		*/
 				case null:
 					if(!(($(event.target).hasClass("drop-button")) || ($(evt.target).closest("#menu-button").length > 0))) {
 						$("#menu-vertical").removeClass("menu-opened");
