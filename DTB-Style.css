@@ -566,6 +566,7 @@ No additional padding*/
 	padding: 2vmin;
 	background-color: rgba(255, 255, 255, 0.75);
 	text-align: justify;
+	font-weight: 300;
 }
 
 .page-title {
@@ -907,6 +908,7 @@ h4, td {
 	
 	.standard-content{
 		background-color: transparent;
+		font-weight: 300;
 	}
 	
 	.shaded-38-left{
@@ -1217,6 +1219,7 @@ No extra Padding*/
 	
 	.standard-content{
 		background-color: transparent;
+		font-weight: 300;
 	}
 	
 	[class*="shaded-"] {
@@ -1480,6 +1483,7 @@ Extra Padding on either side*/
 	
 	.standard-content{
 		background-color: transparent;
+		font-weight: 300;
 	}
 	
 	[class*="shaded-"] {
@@ -1644,8 +1648,8 @@ Extra Padding on either side*/
 
 #footer-first{
 	float: left;
-	padding: 1px;
-	text-align: right;
+	padding: 0 auto;
+	text-align: center;
 	background-color:  #000000;
 	width: 100%;
 	z-index: 2;

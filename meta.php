@@ -3,7 +3,7 @@
 	<meta name="keywords" content="blues, dancing, dance, classes, lessons, blues classes, dance classes, blues lessons, dance lessons, dancing lessons, dancing classes, brisbane, australia">
 	<meta name="viewport" content="width=device-width, height= device-height, initial-scale=1.0">
 	<link rel="icon" type="image/gif"  href="images/icon.gif">
-	<link href="https://fonts.googleapis.com/css?family=Lobster|Josefin+Sans:400,700" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Lobster|Josefin+Sans:300,400,700" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" type="text/css" href="DTB-Style.css">
 	<script src="scripts/prefixfree.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
