@@ -127,10 +127,10 @@ No extra padding*/
 	display: none;
 	float: left;
 	text-align: center;
-	line-height: 1.05em;
-	font-size: 30px;
+	line-height: 1.2em;
+	font-size: 25px;
 	font-family: Josefin Sans;
-	letter-spacing: 3px;
+	letter-spacing: 1px;
 	background-color: #000000;
 	/*overflow: hidden;*/
 }
