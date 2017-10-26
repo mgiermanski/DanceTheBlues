@@ -52,8 +52,7 @@
 					<h4>Class Times</h4>
 					<p>6:30pm - Doors Open<br>
 					7:00pm - Level 1<br>
-					8:15pm - Level 2<br>
-					9:15pm - Social Dancing
+					8:15pm - Level 2
 					<p>
 					<h4>Cost</h4>
 					<p>Regular:	$15<br>
